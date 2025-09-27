@@ -96,7 +96,6 @@ def classify_email():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# Health check endpoint
 @app.route('/api/health', methods=['GET'])
 def health_check():
     return jsonify({
@@ -108,7 +107,6 @@ def health_check():
         }
     })
 
-# Get model info endpoint
 @app.route('/api/info', methods=['GET'])
 def model_info():
     return jsonify({
